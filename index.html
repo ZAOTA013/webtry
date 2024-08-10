@@ -15,13 +15,13 @@
         <div class="carousel">
             <div class="carousel-inner">
                 <!-- 这里放置图片 -->
-                <div class="carousel-item active">
+                <div class="carousel-item active" id="item1">
                     <img src="images/pic1.jpg" alt="Image 1">
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item" id="item2">
                     <img src="images/pic2.jpg" alt="Image 2">
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item" id="item3">
                     <img src="images/pic3.jpg" alt="Image 3">
                 </div>
                 <!-- 继续添加图片... -->
@@ -89,5 +89,21 @@
 
     <script src="script.js"></script>
 </body>
-
+<script>
+    // 为每个图片项添加点击事件监听器
+    document.getElementById('item1').addEventListener('click', function() {
+        // 当点击第一张图片时，跳转到指定的页面1
+        window.location.href = 'day1.html';
+    });
+    
+    document.getElementById('item2').addEventListener('click', function() {
+        // 当点击第二张图片时，跳转到指定的页面2
+        window.location.href = 'day2.html';
+    });
+    
+    document.getElementById('item3').addEventListener('click', function() {
+        // 当点击第三张图片时，跳转到指定的页面3
+        window.location.href = 'day3.html';
+    });
+    </script>
 </html>
