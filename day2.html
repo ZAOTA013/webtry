@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>社会实践成果展示</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #003366;
+            color: white;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        .news-intro {
+            display: block;
+            cursor: pointer;
+            color: #007BFF;
+            margin-bottom: 10px;
+        }
+        .news-content {
+            display: none;
+            padding-left: 20px;
+        }
+        .wechat-articles ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .wechat-articles ul li {
+            margin-bottom: 10px;
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>社会实践成果展示 Day2</h1>
+    </header>
+
+    <section id="daily-news">
+        <h2>每日新闻</h2>
+        <article>
+            <h3 class="news-title">新闻标题1</h3>
+            <span class="news-intro" onclick="toggleNewsContent(1)">点击展开查看全文</span>
+            <div class="news-content" id="news-content-1">
+                <p>这里是新闻内容的详细部分...</p>
+            </div>
+        </article>
+        <article>
+            <h3 class="news-title">新闻标题2</h3>
+            <span class="news-intro" onclick="toggleNewsContent(2)">点击展开查看全文</span>
+            <div class="news-content" id="news-content-2">
+                <p>这里是新闻内容的详细部分...</p>
+            </div>
+        </article>
+        <!-- 可以继续添加更多文章 -->
+    </section>
+
+    <section id="wechat-articles">
+        <h2>公众号推文</h2>
+        <div class="wechat-articles">
+            <ul>
+                <li><a href="https://mp.weixin.qq.com/s/xxxxx" target="_blank">公众号文章1</a></li>
+                <li><a href="https://mp.weixin.qq.com/s/yyyyy" target="_blank">公众号文章2</a></li>
+                <!-- 可以继续添加更多链接 -->
+            </ul>
+        </div>
+    </section>
+
+    <section id="video-results">
+        <h2>视频成果</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+        </div>
+        <!-- 可以继续添加更多视频 -->
+    </section>
+
+    <script>
+        function toggleNewsContent(id) {
+            var content = document.getElementById('news-content-' + id);
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
