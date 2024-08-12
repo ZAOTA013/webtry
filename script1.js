@@ -1,21 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("文档已加载");
-
-    // 新闻展开和收回功能
-    document.querySelectorAll('.expand-btn').forEach(button => {
-        button.addEventListener('click', function() {
-            const fullArticle = this.nextElementSibling;
-            if (fullArticle.style.display === 'none') {
-                fullArticle.style.display = 'block';
-                this.textContent = '收回';
-            } else {
-                fullArticle.style.display = 'none';
-                this.textContent = '展开阅读';
-            }
-        });
-    });
-});
-document.addEventListener('DOMContentLoaded', () => {
     const prev = document.getElementById('prev');
     const next = document.getElementById('next');
     const carouselInner = document.querySelector('.carousel-inner');
@@ -40,5 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
         showItem(1);
     }, 3000); // 每3秒切换图片
 });
-
-
+        function toggleNewsContent(id) {
+            var content = document.getElementById('news-content-' + id);
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
