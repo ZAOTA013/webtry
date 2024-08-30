@@ -44,23 +44,33 @@
         <h2>公众号推文</h2>
         <div class="wechat-articles">
             <ul>
-                <li><a href="https://mp.weixin.qq.com/s/xxxxx" target="_blank">壮志凌云，丹心铸魂Day1| 丹东江畔铭忠烈，抗美援朝书丰碑</a></li>
+                <li><a href="https://mp.weixin.qq.com/s/HoIkNqNoQ5WlM9cc4NVuBA" target="_blank">壮志凌云，丹心铸魂Day1| 丹东江畔铭忠烈，抗美援朝书丰碑</a></li>
                 <!-- 可以继续添加更多链接 -->
             </ul>
         </div>
     </section>
 
     <section id="video-results">
-        <h2>视频成果</h2>
-        <div class="video-container">
-            <video controls>
-                <source src="videos/video1.mp4" type="video/mp4">
-                您的浏览器不支持HTML5视频。
-            </video>
-        </div>
-        <!-- 可以继续添加更多视频 -->
-    </section>
+            <h2>视频成果</h2>
+            <div class="video-list">
+                <ul>
+                    <h3>Day1 vlog</h3>
+                    <li>
+                        <a href="https://vimeo.com/1004338170" target="_blank">
+                            <img src="images/video-luesuo1.jpg" alt="视频缩略图1">
+                            <span>丹东烽火忆英烈，抗美援朝志永扬</span>
+                        </a>
+                    </li>
 
 </body>
-<script src="script.js"></script>
+<script>
+    function toggleNewsContent(id) {
+        var content = document.getElementById('news-content-' + id);
+        if (content.style.display === "none" || content.style.display === "") {
+            content.style.display = "block";
+        } else {
+            content.style.display = "none";
+        }
+    }
+</script>
 </html>

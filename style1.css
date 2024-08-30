@@ -93,3 +93,49 @@ video:fullscreen {
 .carousel-control-next {
     right: 20px;
 }   
+.video-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-list ul li {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px; /* 设置最大宽度，保持适中大小 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.video-list ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.video-list ul li a img {
+    width: 100%;
+    max-width: 100%; /* 缩略图将填充父容器宽度 */
+    height: auto; /* 使高度根据宽度自适应 */
+    object-fit: cover;
+    border-radius: 8px; /* 可选：添加圆角效果 */
+    margin-bottom: 10px;
+}
+
+.video-list ul li a span {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
+}
+
+.video-list ul li a:hover span {
+    color: #007BFF; /* 鼠标悬停时的效果 */
+}
